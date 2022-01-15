@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upsilon Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section id="landing">
+        <nav>
+            <a href="#">
+                <img class="logo" src="./assets/upsilon crypto tracker logo.png" alt="logo">
+            </a>
+            <ul class="nav__links">
+                <li class="nav__link"><a href="#" class="nav__link--anchor">Home</a></li>
+                <li class="nav__link"><a href="#" class="nav__link--anchor">Search for crypto-currencies</a></li>
+                <li class="nav__link"><a href="#" class="nav__link--anchor primary">Contact</a></li>
+            </ul>
+        </nav>
+        <header>
+            <div class="header__container">
+                <div class="header__search">
+                    <h1>Search for Crypto-Currencies</h1>
+                    <div class="header__search--input">
+                        <input type="text" placeholder="bitcoin" class="input-field" onchange="searchData(event)">
+                        <button type="button" onclick="searchData('text')" class="search-button"><i
+                                class="fas fa-search"></i></button>
+                    </div>
+                    <select id="filter" onchange="fetchFilterData(event)">
+                        <option value="" disabled selected>Sort</option>
+                        <option value="LOW_TO_HIGH">Price, Low to High</option>
+                        <option value="HIGH_TO_LOW">Price, High to Low</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+    </section>
+    <section id="crypto-results">
+        <div class="row">
+            <table id="crypto__coins">
+                <tr class="table__head">
+                    <th scope="col"></th>
+                    <th scope="col">Rank</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Change</th>
+                </tr>
+                <tbody id="data">
+                    <!--Coin goes here-->
+                </tbody>
+            </table>
+            <div class="loading loading__active">
+                <i class="fas fa-spinner loading--spinner"></i>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+                <a href="#" class="footer__anchor">
+                    <figure>
+                        <img src="./assets/upsilon crypto tracker logo.png" alt="footer logo" class="footer__logo--img">
+                    </figure>
+                    <span class="footer__logo--popper">
+                        Top
+                        <i class="fas fa-arrow-up"></i>
+                    </span>
+                </a>
+                <div class="footer__social--list">
+                    <a href="#" class="footer__social--link">Home</a>
+                    <a href="#" class="footer__social--link">Dashboard</a>
+                    <a href="#" class="footer__social--link">Contact</a>
+                </div>
+                <div class="footer__copyright">Copyright © 2022 Upsilon Trading</div>
+            </div>
+        </div>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+
+</html>

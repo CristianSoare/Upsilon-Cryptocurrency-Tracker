@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+select{
+    font-size: 24px;
+    margin-top: 12px;
+    color: white;
+    background-color: #802bb1;
+    border:none;
+    border-radius: 50px;
+    padding: 4px 12px;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+html,body{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+h1{
+    color: white;
+    font-size: 36px;
+    letter-spacing: 0.05rem;
+}
+
+
+
+.input-field{
+    max-width: 510px;
+    width: 100%;
+    height: 50px;
+    color: black;
+    background-color: white;
+    border: solid #802bb1 4px;
+    border-radius: 50px;
+    font-size: 22px;
+    transition: all 300ms ease;
+    padding-left: 8px;
+}
+
+.input-field:hover{
+    border: solid #564f5f 4px;
+}
+
+/*
+
+NAV
+
+*/
+
+#landing{
+    background-color: #2d283E;
+    height: 40vh;
+}
+
+.row{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1300px;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 150px;
+    padding: 0 20px;
+}
+
+.logo{
+    max-width: 200px;
+    width: 100%;
+    filter: brightness(0) saturate(100%) invert(25%) sepia(38%) saturate(3785%) hue-rotate(262deg) brightness(86%) contrast(101%);
+    transition: all 400ms ease;
+    padding: 24px;
+}
+
+.logo:hover{
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(203deg) brightness(100%) contrast(102%);
+    transform: scale(1.07);
+}
+
+.nav__links{
+    display: flex;
+    max-width: 500px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__link{
+    display: flex;
+}
+
+.nav__link--anchor{
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all 300ms ease;
+}
+
+.nav__link--anchor:hover{
+    color: #802bb1;
+    font-size: 18px;
+    font-weight: 700;
+
+}
+
+.primary{
+    border: solid #802bb1 2px;
+    background-color: #802bb1;
+    padding: 12px 16px;
+    border-radius:50px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.primary:hover{
+    border: solid white 2px;
+    background-color: transparent;
+    color: white;
+}
+
+.header__search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header__container{
+    margin-top: 48px;
+}
+
+.header__search--input{
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 18px;
+}
+
+.search-button{
+    font-size: 28px;
+    border: none;
+    color: #802bb1;
+    display: block;
+    background-color: transparent;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.search-button:hover{
+    color: #564f5f;
+}
+
+/*
+
+MAIN
+
+*/
+
+#crypto-results{
+    background-color: #564f5f;
+    height: 100%;
+    min-height: 50vh;
+}
+
+#crypto__coins{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#crypto__coins th{
+    padding: 22px 0;
+    text-align: center;
+    color: #d1d7e0;
+    font-size: 24px;
+    border-bottom: 2px solid #d1d7e0;
+}
+
+#crypto__coins td{
+    text-align: center;
+    padding: 12px 0;
+    font-size: 16px;
+    color: #d1d7e0;
+}
+
+#crypto__coins tr{
+    border-bottom: solid 2px #d1d7e0;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+}
+
+.icons__crypto{
+    width:24px;
+}
+
+.green__change{
+    color: #4ded30 !important;
+    font-weight: bold;
+}
+
+.red__change{
+    color: red !important;
+    font-weight: bold;
+}
+
+footer{
+    background-color: #4c495d;
+    display: flex;
+    position: relative;
+}
+
+.footer__row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__logo--img{
+    width: 100px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(203deg) brightness(100%) contrast(102%);
+    width: 100px;
+}
+
+
+.footer__social--link,
+.footer__copyright{
+    color: white;
+}
+
+.footer__social--link{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer__social--list{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.footer__logo--popper{
+    position: absolute;
+    right: 0;
+    top: 20px;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 300ms ease;
+    color: white;
+}
+
+.footer__anchor{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.footer__anchor:hover .footer__logo--popper{
+    transform: translateX(50px);
+    opacity: 1;
+}
+
+.container{
+    padding: 50px 0;
+    width: 100%;
+}
+
+.loading__active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 0;
+    font-size: 60px;
+    color: white;
+  }
+  
+  .loading--spinner{
+    display: none !important;
+  }
+  
+  .loading__active .loading--spinner{
+    display: block !important;
+  }
+  
+  .fa-spinner {
+    animation: rotate 600ms infinite linear;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
