@@ -4,6 +4,7 @@ My first vanilla JS website that uses the Coin Ranking API to constantly update 
 coin name.
 
 Functions:
+
   -Created various JS functions to calculate the price of each coin to 2 decimal points for easier readability. 
   
   -Optimised the website for smaller screens such as smart phones. 
