@@ -8,7 +8,7 @@
 }
 
 select{
-    font-size: 24px;
+    font-size: 18px;
     margin-top: 12px;
     color: white;
     background-color: #802bb1;
@@ -35,16 +35,16 @@ li{
 
 h1{
     color: white;
-    font-size: 36px;
+    font-size: 28px;
     letter-spacing: 0.05rem;
 }
 
 
 
 .input-field{
-    max-width: 510px;
+    max-width: 500px;
     width: 100%;
-    height: 50px;
+    height: 42px;
     color: black;
     background-color: white;
     border: solid #802bb1 4px;
@@ -66,7 +66,7 @@ NAV
 
 #landing{
     background-color: #2d283E;
-    height: 40vh;
+    height: 45vh;
 }
 
 .row{
@@ -148,7 +148,7 @@ nav{
 }
 
 .header__container{
-    margin-top: 48px;
+    margin-top: 2rem;
 }
 
 .header__search--input{
@@ -157,7 +157,8 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 18px;
+    padding-top: 2rem;
+    padding: 18px 12px 0px 12px;
 }
 
 .search-button{
@@ -202,7 +203,7 @@ MAIN
 
 #crypto__coins td{
     text-align: center;
-    padding: 12px 0;
+    padding: 12px;
     font-size: 16px;
     color: #d1d7e0;
 }
@@ -295,21 +296,21 @@ footer{
     padding: 150px 0;
     font-size: 60px;
     color: white;
-  }
+}
   
-  .loading--spinner{
+.loading--spinner{
     display: none !important;
-  }
+}
   
-  .loading__active .loading--spinner{
+.loading__active .loading--spinner{
     display: block !important;
-  }
+}
   
-  .fa-spinner {
+.fa-spinner {
     animation: rotate 600ms infinite linear;
-  }
+}
   
-  @keyframes rotate {
+@keyframes rotate {
     0% {
       transform: rotate(0);
     }
@@ -317,4 +318,41 @@ footer{
     100% {
       transform: rotate(360deg);
     }
-  }
+}
+
+@media(max-width:728px) {
+    #crypto__coins th{
+        padding: 12px 0;
+        text-align: center;
+        color: #d1d7e0;
+        font-size: 18px;
+        border-bottom: 2px solid #d1d7e0;
+    }
+    .nav__links{
+        display: flex;
+        max-width: 220px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav__link--anchor{
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+        transition: all 300ms ease;
+    }
+    
+    .nav__link--anchor:hover{
+        color: #802bb1;
+        font-size: 16px;
+        font-weight: 700;
+    
+    }
+
+    #crypto__coins tr{
+        border-bottom: solid 2px #d1d7e0;
+        font-weight: 500;
+        letter-spacing: 0.05rem;
+    }
+}
