@@ -5,7 +5,7 @@ let proxyUrl = 'https://cors-anywhere.herokuapp.com/' //cors proxy
 let apiKey = 'coinranking645799e421e5bd585694f194d748ee0640a3c42826f704a7' //api key
 
 function fetchData() {
-    const apiLoadingState = document.querySelector('.loading') 
+    const apiLoadingState = document.querySelector('.loading')
     apiLoadingState.classList += ' loading__active' //adds spinner loading state while i fetch api
     fetch(`${proxyUrl}${baseUrl}`, {
         method: 'GET', //get rqst
@@ -21,18 +21,18 @@ function fetchData() {
                 let coinsData = json.data.coins; //make variable w data
                 if (coinsData.length > 0) {
                     var cryptoCoin = '' //make empty string
-                //for loop to go through each coin 
-                coinsData.map((coin) => {
-                    cryptoCoin += '<tr>'; //add the html to display the coins
-                    cryptoCoin += `<td><img class="icons__crypto" src="${coin.iconUrl}"></td>`
-                    cryptoCoin += `<td>${coin.rank}</td>`
-                    cryptoCoin += `<td>${coin.name}</td>`
-                    cryptoCoin += `<td>${priceRound(coin.price)}</td>`
-                    cryptoCoin += `<td>${coin.symbol}</td>`
-                    cryptoCoin += `<td class="${redGreen(coin.change)}">${changeFilter(coin.change)}%</td>`; "<tr>"
-                })
-                document.getElementById("data").innerHTML = cryptoCoin;
-            }
+                    //for loop to go through each coin 
+                    coinsData.map((coin) => {
+                        cryptoCoin += '<tr>'; //add the html to display the coins
+                        cryptoCoin += `<td><img class="icons__crypto" src="${coin.iconUrl}"></td>`
+                        cryptoCoin += `<td>${coin.rank}</td>`
+                        cryptoCoin += `<td>${coin.name}</td>`
+                        cryptoCoin += `<td>${priceRound(coin.price)}</td>`
+                        cryptoCoin += `<td>${coin.symbol}</td>`
+                        cryptoCoin += `<td class="${redGreen(coin.change)}">${changeFilter(coin.change)}%</td>`; "<tr>"
+                    })
+                    document.getElementById("data").innerHTML = cryptoCoin;
+                }
             }
             )
         }
@@ -98,7 +98,8 @@ function fetchFilterData(event) { //fetch data again and return the event from t
                 })
                 document.getElementById("data").innerHTML = cryptoCoin;
             }
-            )}
+            )
+        }
     }).catch((error) => {
         console.log(error)
     });
@@ -140,8 +141,9 @@ function searchData(event) { //refetch data but also include value from input fo
                 })
                 document.getElementById("data").innerHTML = cryptoCoin;
             }
-            )}
-        }).catch((error) => {
+            )
+        }
+    }).catch((error) => {
         console.log(error);
     });
 }

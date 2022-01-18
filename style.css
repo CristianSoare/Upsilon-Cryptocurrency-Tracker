@@ -320,7 +320,7 @@ footer{
     }
 }
 
-@media(max-width:728px) {
+@media(max-width:768px) {
     #crypto__coins th{
         padding: 12px 0;
         text-align: center;
@@ -358,5 +358,9 @@ footer{
 
     h1{
         font-size: 24px;
+    }
+
+    #crypto__coins td{
+        padding: 12px 0;
     }
 }
