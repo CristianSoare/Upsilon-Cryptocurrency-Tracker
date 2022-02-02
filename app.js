@@ -7,7 +7,7 @@ let apiKey = 'coinranking645799e421e5bd585694f194d748ee0640a3c42826f704a7' //api
 function fetchData() {
     const apiLoadingState = document.querySelector('.loading')
     apiLoadingState.classList += ' loading__active' //adds spinner loading state while i fetch api
-    fetch(`${baseUrl}`, { //${proxyUrl}
+    fetch(`${proxyUrl}${baseUrl}`, { //${proxyUrl}
         method: 'GET', //get rqst
         headers: {
             'Content-Type': 'application/json',
