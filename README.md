@@ -22,5 +22,4 @@ The website application is still in testing stages since I am having problems wi
 
 Only paid version of the Coin Ranking API enables CORS. I am using the free testing version, therefore I had to use a CORS proxy which needs to be enabled via the console. 
 
-RECRUITERS:
 Please check console logs to enable CORS proxy and view the website with its full functionality.
