@@ -2,7 +2,7 @@
 
 let baseUrl = 'https://api.coinranking.com/v2/coins' // api url
 let proxyUrl = 'https://cors-anywhere.herokuapp.com/' //cors proxy
-let apiKey = 'coinranking645799e421e5bd585694f194d748ee0640a3c42826f704a7' //api key
+let apiKey = 'coinranking36e826d92018331b2aa81434493cbe8174ef7352bdf96fd4' //api key
 
 function fetchData() {
     const apiLoadingState = document.querySelector('.loading')
