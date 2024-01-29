@@ -1,13 +1,13 @@
 //coinranking36e826d92018331b2aa81434493cbe8174ef7352bdf96fd4
 
 let baseUrl = 'https://api.coinranking.com/v2/coins' // api url
-let proxyUrl = 'https://cors-anywhere.herokuapp.com/' //cors proxy
+//let proxyUrl = 'https://cors-anywhere.herokuapp.com/' //cors proxy
 let apiKey = 'coinranking36e826d92018331b2aa81434493cbe8174ef7352bdf96fd4' //api key
 
 function fetchData() {
     const apiLoadingState = document.querySelector('.loading')
     apiLoadingState.classList += ' loading__active' //adds spinner loading state while i fetch api
-    fetch(`${proxyUrl}${baseUrl}`, { //${proxyUrl}
+    fetch(`${baseUrl}`, { //${proxyUrl}
         method: 'GET', //get rqst
         headers: {
             'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ function redGreen(change) {  //change colours based on whether change is positiv
 function fetchFilterData(event) { //fetch data again and return the event from the select tag
     const apiLoadingState = document.querySelector('.loading')
     apiLoadingState.classList += ' loading__active'
-    fetch(`${proxyUrl}${baseUrl}`, {
+    fetch(`${baseUrl}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
