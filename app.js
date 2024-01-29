@@ -1,7 +1,6 @@
 //coinranking36e826d92018331b2aa81434493cbe8174ef7352bdf96fd4
 
 let baseUrl = 'https://api.coinranking.com/v2/coins' // api url
-//let proxyUrl = 'https://cors-anywhere.herokuapp.com/' //cors proxy
 let apiKey = 'coinranking36e826d92018331b2aa81434493cbe8174ef7352bdf96fd4' //api key
 
 function fetchData() {
@@ -109,7 +108,7 @@ function fetchFilterData(event) { //fetch data again and return the event from t
 function searchData(event) { //refetch data but also include value from input for coin search
     const apiLoadingState = document.querySelector('.loading');
     apiLoadingState.classList += ' loading__active';
-    fetch(`${proxyUrl}${baseUrl}`, {
+    fetch(`${baseUrl}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
