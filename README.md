@@ -17,9 +17,3 @@ Functions:
   
   -Implemented a loading state while the script fetches the data using an animated spinner.
   
-
-The website application is still in testing stages since I am having problems with CORS.
-
-Only paid version of the Coin Ranking API enables CORS. I am using the free testing version, therefore I had to use a CORS proxy which needs to be enabled via the console. 
-
-Please check console logs to enable CORS proxy and view the website with its full functionality.
